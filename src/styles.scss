@@ -36,4 +36,10 @@ $snowtracer-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f8f9fa !important; }
+
+.module-header {
+  height: 160px;
+  background-color: white;
+  box-shadow: 0 1px 10px rgb(151 164 175 / 10%);
+}

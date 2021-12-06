@@ -1,0 +1,13 @@
+<div class="module-header">
+
+  <app-shared-header (onSearch)="getTransactions($event)"></app-shared-header>
+
+</div>
+
+
+<!-- <div id="barChart" style="position: relative; height:60vh; width:120vw"></div> -->
+
+<div *ngIf="ready">
+  <div id="my_dataviz" style="position: relative; height:60vh; width:100vw"></div>
+  <!-- <app-network-graph [links]="links" [nodes]="nodes" [clusters]="clusters"></app-network-graph> -->
+</div>

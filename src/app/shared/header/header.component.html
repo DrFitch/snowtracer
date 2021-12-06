@@ -1,0 +1,31 @@
+<div class="header-container h-100">
+    <div class="logo mx-4">
+        <img src="assets/images/snowtracer.png" height=50 alt="" srcset="">
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center h-100">
+
+        <div class="container">
+            <div class="container__item">
+                <form class="form">
+                    <input [(ngModel)]="address" name="address" class="form__field" placeholder="Search by address" />
+                    <button type="button" class="btn btn--primary btn--inside uppercase"
+                        (click)="getTransactions()">Search</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="gas h-100">
+        <div class="price m-2">
+            <i class="mdi mdi-gas-station mdi-24px"></i> {{ formatPrice(this.gas?.fast.price) }} (instant)
+        </div>
+        <div class="price m-2">
+            <i class="mdi mdi-gas-station mdi-24px"></i> {{ formatPrice(this.gas?.normal.price) }} (normal)
+        </div>
+        <div class="price m-2">
+            <i class="mdi mdi-gas-station mdi-24px"></i> {{ formatPrice(this.gas?.slow.price) }} (slow)
+        </div>
+    </div>
+</div>

@@ -1,13 +1,15 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AvalancheService } from './avalanche.service';
-import { MatInputModule } from '@angular/material/input';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { NgxGraphModule } from '@swimlane/ngx-graph';
+import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,16 @@ import { NgxGraphModule } from '@swimlane/ngx-graph';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    MatInputModule,
     HttpClientModule,
-    NgxGraphModule
+    AppRoutingModule,
+    FormsModule,
+    HomeModule,
+    SharedModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule
+  ],
+  exports: [
   ],
   providers: [
     AvalancheService

@@ -1,0 +1,129 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center
+}
+
+.logo {
+    // position: absolute;
+    // top: 55px;
+    // left: 30px;
+}
+
+.gas {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: flex-start;
+    justify-content: center;
+
+
+    .price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// search
+
+//** variables
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #e84142;
+$button-text-color: #fff;
+
+//** root
+:root {
+    background: $background;
+    color: $text;
+    font: 1rem "PT Sans", sans-serif;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+}
+
+a {
+    color: inherit;
+
+    &:hover {
+        color: $button-bg-color;
+    }
+}
+
+//** helper
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+//** button
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+
+    &--primary {
+        background: $button-bg-color;
+        color: $button-text-color;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+        border-radius: 2px;
+        padding: 12px 36px;
+
+        &:hover {
+            background: darken($button-bg-color, 4%);
+        }
+
+        &:active {
+            background: $button-bg-color;
+            box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+        }
+    }
+
+    &--inside {
+        margin-left: -96px;
+    }
+}
+
+//** form
+.form {
+    &__field {
+        width: 450px;
+        background: #fff;
+        color: $input-text-color;
+        font: inherit;
+        box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 10%);
+        border: 0;
+        outline: 0;
+        padding: 22px 18px;
+    }
+
+    &__field::placeholder {
+        position: relative;
+        top: 2px;
+    }
+
+    &__field::target-text {
+        position: relative;
+        top: 2px;
+    }
+}
